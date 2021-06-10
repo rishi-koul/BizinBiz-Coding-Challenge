@@ -20,7 +20,7 @@ function returnCountries(data, searchQuery){
     for(var i = 0; i < data.length; i++)
     {
         var index = check(fruits, data[i].location);
-
+        searchQuery = searchQuery.toLowerCase();
         if(index === -1 && data[i].location.toLowerCase().startsWith(searchQuery))
         {
             fruits.push(data[i].location);

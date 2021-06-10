@@ -66,6 +66,7 @@ const MyTable = ({ company, ticker}) => {
       
         for(var i = 0; i < posts.length; i++)
         {
+          query = query.toLowerCase();
           if(posts[i].location.toLowerCase().startsWith(query))
           {
             filtered.push(posts[i]);
